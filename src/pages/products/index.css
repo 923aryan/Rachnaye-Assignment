@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.maincontainer{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.maincontainer:hover > .thecard{
+cursor: pointer;
+transform: rotateY(180deg);
+}
+
+.thecard{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+.thecard:hover{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.thefront,
+.theback{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility:  hidden;
+}
+.theback{
+    transform: rotateY(180deg);
+}
+.product-container {
+    display: flex;
+    gap: 10px;
+    width: 100%; 
+    overflow-x: auto; 
+}
