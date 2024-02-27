@@ -30,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, classes }) => {
     return () => clearInterval(interval);
   }, [product.images]);
   return (
-    <div className='maincontainer flex flex-col justify-center'>
+    <div className='maincontainer flex flex-col justify-center mb-4'>
       <div className='thecard'>
         <div className='thefront'>
           <Card style={{
@@ -90,6 +90,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, classes }) => {
               position: 'relative',
               zIndex: 1,
             }}>
+                <Typography variant="h6" component="p" style={{fontWeight : "bold", color: "yellow"}}>
+                {product.title}
+                </Typography>
                 <Typography variant="body2" component="p" style={{fontWeight : "bold"}}>
                   Price: ${product.price}
                 </Typography>
@@ -112,7 +115,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, classes }) => {
             </Card>
         </div>
       </div>
-      <div className='font-semibold flex flex-row justify-center'>{product.title}</div>
+      <div className='font-semibold flex flex-row justify-center pb-4'>{product.title}</div>
     </div>
 
   );
