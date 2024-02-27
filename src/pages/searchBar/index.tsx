@@ -36,7 +36,7 @@ function SearchPage() {
     }, []);
     return (
         <>
-            <div className="bg-gradient-to-r from-teal-500 to-purple-600 min-h-[35vh] rounded-[8px] w-full flex flex-col justify-between items-center p-5 space-y-4" style={{background: "linear-gradient(150deg, rgb(1, 195, 204), rgb(125, 42, 231))"}}>
+            <div className="min-h-[35vh] rounded-[8px] w-full flex flex-col justify-between items-center p-5 space-y-4" style={{background: "linear-gradient(150deg, rgb(1, 195, 204), rgb(125, 42, 231))"}}>
                 <h2 className="text-white text-4xl">What will you Purchase today? </h2>
                 <SearchBar onProductSelected={(productId: number) => { setShowAllCategory(false); setCategory(null); setProdcutId(productId); console.log("pname", productId, category, showAllCategory) }
                 } ></SearchBar>
