@@ -18,18 +18,19 @@ interface ProductCardProps {
   classes: Record<string, string>;
 }
 
+// The actual product card which uses MUI 4 Card 
 const ProductCard: React.FC<ProductCardProps> = ({ product, classes }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % product.images.length);
-    }, 1000); // Change the interval duration as needed
+    }, 1000); 
 
     return () => clearInterval(interval);
   }, [product.images]);
   return (
-    <div className='maincontainer flex flex-col justify-center'>
+    <div className='maincontainer flex flex-col justify-center md-4'>
       <div className='thecard'>
         <div className='thefront'>
           <Card style={{
@@ -43,7 +44,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, classes }) => {
             {product.images.length > 0 && (
               <img
                 src={product.images[currentImageIndex]}
-                alt="Product Thumbnail"
+                alt="Loading Images"
                 style={{
                   position: 'absolute',
                   top: 0,

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getPaginatedProducts } from "../../searchBar/api/requests";
 import ProductCard from "../components/Card";
 import { makeStyles } from "@material-ui/core";
-
+import '../index.css'
 interface Product {
     id: number;
     title: string;
@@ -82,14 +82,14 @@ const AllProduct: React.FC = () => {
         <div className="flex flex-row justify-center text-cyan-500 font-bold text-2xl">ALL PRODUCTS</div>
   
         <div className="flex">
-          <div className="w-1/2 p-4">
+          <div className="w-1/2 p-4 text-white">
             {leftProducts.map((product, index) => (
               <div key={product.id.toString() + product.title} className="mb-2 flex flex-row justify-center">
                 <ProductCard product={product} classes={classes} />
               </div>
             ))}
           </div>
-          <div className="w-1/2 p-4">
+          <div className="w-1/2 p-4 text-white mb-4">
             {rightProducts.map((product, index) => (
               <div key={product.id} className="mb-2 flex flex-row justify-center">
                 <ProductCard product={product} classes={classes} />
