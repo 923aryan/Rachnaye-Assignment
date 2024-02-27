@@ -30,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, classes }) => {
     return () => clearInterval(interval);
   }, [product.images]);
   return (
-    <div className='maincontainer flex flex-col justify-center md-4'>
+    <div className='maincontainer flex flex-col justify-center'>
       <div className='thecard'>
         <div className='thefront'>
           <Card style={{
@@ -44,7 +44,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, classes }) => {
             {product.images.length > 0 && (
               <img
                 src={product.images[currentImageIndex]}
-                alt="Loading Images"
+                alt="Product Thumbnail"
                 style={{
                   position: 'absolute',
                   top: 0,

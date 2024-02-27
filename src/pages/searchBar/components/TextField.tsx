@@ -28,6 +28,8 @@ interface Category {
 interface SingleProduct {
     onProductSelected: (productId: number) => void
 }
+
+//SearchBar component
 export const SearchBar: React.FC<SingleProduct> = ({ onProductSelected }) => {
 
     const searchBarRef = useRef<HTMLDivElement | null>(null)
@@ -87,7 +89,7 @@ export const SearchBar: React.FC<SingleProduct> = ({ onProductSelected }) => {
                         ),
 
                         disableUnderline: true,
-                        placeholder: "Use 5+ words to describe your design",
+                        placeholder: "Use 5+ letters to describe your product",
 
                     }}
 
